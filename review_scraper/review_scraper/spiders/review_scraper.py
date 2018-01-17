@@ -26,7 +26,7 @@ class ReviewSpider(scrapy.Spider):
             star_rating = review.css('div.scoreWrapper').css('span')
             username = review.css('span')
             user_link = review.css('a').xpath('@href').extract()[0]
-            f.write(str(user_review.extract()[0].split('</div>')[1]) + ', ')
+            f.write(user_review.extract()[0].split('</div>')[1].replace(',', '').replace(';', '') + ', ')
             try:
                 f.write(str(float(star_rating.extract()[0].split('"')[1]) / 10) + ', ')
             except ValueError:
