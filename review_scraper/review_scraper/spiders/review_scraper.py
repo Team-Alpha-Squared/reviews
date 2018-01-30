@@ -20,7 +20,7 @@ class ReviewSpider(scrapy.Spider):
     def parse(self, response):
         """Write generated scraped content to CSV file."""
 
-        f = open('reviews.csv', 'a+')
+        f = open('newest_reviews.csv', 'a+')
         for review in response.css('div.review_table_row'):
             user_review = review.css('div.user_review')
             star_rating = review.css('div.scoreWrapper').css('span')
