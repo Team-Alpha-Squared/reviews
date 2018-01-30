@@ -26,8 +26,9 @@ class ReviewSpider(scrapy.Spider):
             star_rating = review.css('div.scoreWrapper').css('span')
             username = review.css('span')
             user_link = review.css('a').xpath('@href').extract()[0]
-            # TODO: Add in date for review
-            # TODO: Add in superreviewer status for review, if present.
+            date_review = review.css('span.fr').extract()[0]
+            superreviewer_status = review.css('div.superreviewer').extract()[0]
+
             f.write(user_review.extract()[0].split('</div>')[1].replace(',', '').replace(';', '') + ', ')
             try:
                 f.write(str(float(star_rating.extract()[0].split('"')[1]) / 10) + ', ')
@@ -35,5 +36,7 @@ class ReviewSpider(scrapy.Spider):
                 f.write(star_rating.extract()[0].split('"')[1] + ', ')
             f.write(username.extract()[0].split('>')[1].split('<')[0] + ', ')
             f.write('https://www.rottentomatoes.com' + user_link)
+            f.write(date_review.strip('<span> class="fr small subtle"></'))
+            f.write(superreviewer_status.strip('<div class="col-sm-7 col-xs-9 top_critic col-sm-push-13 superreviewer"></div>'))
             f.write('\n')
         f.close()
