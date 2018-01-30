@@ -36,7 +36,7 @@ class ReviewSpider(scrapy.Spider):
                 f.write(star_rating.extract()[0].split('"')[1] + ', ')
             f.write(username.extract()[0].split('>')[1].split('<')[0] + ', ')
             f.write('https://www.rottentomatoes.com' + user_link + ', ')
-            f.write(date_review.strip('<span> class="fr small subtle">,</') + ', ')
+            f.write(date_review.strip('<span> class="fr small subtle">,</').replace(',', '') + ', ')
             f.write(superreviewer_status.strip('<div class="col-sm-7 col-xs-9 top_critic col-sm-push-13 superreviewer"></div>'))
             f.write('\n')
         f.close()
