@@ -106,3 +106,8 @@ ENV
 /ENV/
 .ENV
 .env
+
+#AWS and Ansible config files
+simple_nginx_config
+gunicorn.conf
+playbook.yml
