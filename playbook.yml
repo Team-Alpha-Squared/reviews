@@ -1,18 +1,18 @@
 ---
-- hosts: review_renew
+- hosts: review-renew
   become: yes
   become_method: sudo
 
   environment:
-      DEBUG: '{{ DEBUG }}'
       SECRET_KEY: '{{ SECRET_KEY }}'
+      DEBUG: '{{ DEBUG }}'
       DATABASE_NAME: '{{ DATABASE_NAME }}'
       DATABASE_USER: '{{ DATABASE_USER }}'
       DATABASE_PASSWORD: '{{ DATABASE_PASSWORD }}'
       DATABASE_HOST: '{{ DATABASE_HOST }}'
-      AWS_ACCESS_KEY_ID: '{{ AWS_ACCESS_KEY_ID }}'
-      AWS_SECRET_ACCESS_KEY: '{{ AWS_SECRET_ACCESS_KEY }}'
       AWS_STORAGE_BUCKET_NAME: '{{ AWS_STORAGE_BUCKET_NAME }}'
+      IAM_USER_ACCESS_KEY_ID: '{{ AWS_ACCESS_KEY_ID }}'
+      IAM_USER_SECRET_ACCESS_KEY: '{{ AWS_SECRET_ACCESS_KEY }}'
 
   tasks:
     - name: Update things on instance of ec2
@@ -33,7 +33,7 @@
         clone=yes
         repo=https://github.com/Team-Alpha-Squared/reviews.git
         dest=/home/ubuntu/review_renew/
-        version=features-google-analytics
+        version=features-website-deployment
     - name: Create venv
       command: python3 -m venv /home/ubuntu/review_renew/ENV
     - name: Install gunicorn to VENV
