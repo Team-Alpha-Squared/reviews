@@ -139,8 +139,8 @@ AWS_SECRET_ACCESS_KEY = os.environ.get('IAM_USER_SECRET_ACCESS_KEY', '')
 AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME', '')
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
-STATICFILES_STORAGE = 'portfolio.custom_storages.StaticStorage'
-DEFAULT_FILE_STORAGE = 'portfolio.custom_storages.MediaStorage'
+STATICFILES_STORAGE = 'review_renew.custom_storages.StaticStorage'
+DEFAULT_FILE_STORAGE = 'review_renew.custom_storages.MediaStorage'
 
 if DEBUG:
 

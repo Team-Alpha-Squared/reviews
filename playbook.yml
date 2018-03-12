@@ -11,8 +11,8 @@
       DATABASE_PASSWORD: '{{ DATABASE_PASSWORD }}'
       DATABASE_HOST: '{{ DATABASE_HOST }}'
       AWS_STORAGE_BUCKET_NAME: '{{ AWS_STORAGE_BUCKET_NAME }}'
-      IAM_USER_ACCESS_KEY_ID: '{{ AWS_ACCESS_KEY_ID }}'
-      IAM_USER_SECRET_ACCESS_KEY: '{{ AWS_SECRET_ACCESS_KEY }}'
+      IAM_USER_ACCESS_KEY_ID: '{{ IAM_USER_ACCESS_KEY_ID }}'
+      IAM_USER_SECRET_ACCESS_KEY_ID: '{{ IAM_USER_SECRET_ACCESS_KEY_ID }}'
 
   tasks:
     - name: Update things on instance of ec2
@@ -50,7 +50,7 @@
       when: not default_stat.stat.exists
     - name: Create new default file for nginx
       template:
-        src=/home/n0z/work/review_renew/simple_nginx_config
+        src=/home/n0z/work/reviews/simple_nginx_config
         dest=/etc/nginx/sites-available/default
     - name: Restart the nginx service
       service:
@@ -60,7 +60,7 @@
       become_method: sudo
     - name: Copy upstart script into etc
       template:
-        src=/home/n0z/work/review_renew/gunicorn.conf
+        src=/home/n0z/work/reviews/gunicorn.conf
         dest=/etc/init/
     - pip:
         virtualenv: /home/ubuntu/review_renew/ENV
