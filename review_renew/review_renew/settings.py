@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'website',
-    'psycopg2'
+    'psycopg2',
+    'storages'
 ]
 
 MIDDLEWARE = [
