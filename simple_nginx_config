@@ -1,6 +1,6 @@
 server {
     listen 80;
-    server_name REPLACE ME WITH AMAZON EC2 ADDRESS;
+    server_name ec2-54-234-120-86.compute-1.amazonaws.com;
     access_log /var/log/nginx/test.log;
 
     location / {

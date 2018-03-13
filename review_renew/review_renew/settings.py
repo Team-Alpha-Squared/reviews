@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DEBUG', '')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ec2-54-234-120-86.compute-1.amazonaws.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'website',
-    'psycopg2'
+    'psycopg2',
+    'storages'
 ]
 
 MIDDLEWARE = [
@@ -134,12 +135,12 @@ MEDIAFILES_LOCATION = 'media'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 AWS_ACCESS_KEY_ID = os.environ.get('IAM_USER_ACCESS_KEY_ID', '')
-AWS_SECRET_ACCESS_KEY = os.environ.get('IAM_USER_SECRET_ACCESS_KEY', '')
+AWS_SECRET_ACCESS_KEY = os.environ.get('IAM_USER_SECRET_ACCESS_KEY_ID', '')
 AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME', '')
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
-STATICFILES_STORAGE = 'portfolio.custom_storages.StaticStorage'
-DEFAULT_FILE_STORAGE = 'portfolio.custom_storages.MediaStorage'
+STATICFILES_STORAGE = 'review_renew.custom_storages.StaticStorage'
+DEFAULT_FILE_STORAGE = 'review_renew.custom_storages.MediaStorage'
 
 if DEBUG:
 
