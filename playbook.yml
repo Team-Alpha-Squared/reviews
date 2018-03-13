@@ -69,7 +69,7 @@
         virtualenv: /home/ubuntu/review_renew/ENV
         command: collectstatic
         app_path: /home/ubuntu/review_renew/review_renew/
-    - name: Start Portfolio Website app
+    - name: Start Review Renew Website
       service:
         name=gunicorn
         state=restarted
