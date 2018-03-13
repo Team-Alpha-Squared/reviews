@@ -1,4 +1,4 @@
-"""Custom storage classes for Review Renew' static and media files."""
+"""Custom storage classes for Review Renew static and media files."""
 
 
 from django.conf import settings
