@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['ec2-54-234-120-86.compute-1.amazonaws.com', 'localhost', '127.0.0.1']
 
@@ -139,8 +139,8 @@ AWS_SECRET_ACCESS_KEY = os.environ.get('IAM_USER_SECRET_ACCESS_KEY_ID', '')
 AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME', '')
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
-# STATICFILES_STORAGE = 'review_renew.custom_storages.StaticStorage'
-# DEFAULT_FILE_STORAGE = 'review_renew.custom_storages.MediaStorage'
+STATICFILES_STORAGE = 'review_renew.custom_storages.StaticStorage'
+DEFAULT_FILE_STORAGE = 'review_renew.custom_storages.MediaStorage'
 
 if DEBUG:
 
