@@ -19,3 +19,11 @@ class TestHomeView(TestCase):
         response = self.client.get('/')
 
         self.assertEqual(response.status_code, 200)
+
+    def test_home_view_page_named_index(self):
+        """Test that the template used to render the home page is called
+        index.html."""
+
+        response = self.client.get('/')
+
+        self.assertEqual(response.templates[0].name, 'website/index.html')
