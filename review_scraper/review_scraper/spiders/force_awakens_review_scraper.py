@@ -13,7 +13,7 @@ class ReviewSpider(scrapy.Spider):
 
         urls = []
         for i in range(1, 52):
-            url = 'https://www.rottentomatoes.com/m/star_wars_episode_vii_the_force_awakens/reviews/?page=%s' + str(i) + '&type=user&sort='
+            url = 'https://www.rottentomatoes.com/m/star_wars_episode_vii_the_force_awakens/reviews/?page=' + str(i) + '&type=user&sort='
             urls.append(url)
 
         # After the list is built, the parse() method is then called on each
