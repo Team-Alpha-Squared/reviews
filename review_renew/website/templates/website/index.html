@@ -51,12 +51,9 @@
 						</div>
 						<div class="main-menubar d-flex align-items-center">
 							<nav class="hide">
-								{% load static %}
-								<a href="index.html">Home</a>
-								{% load static %}
-								<a href="generic.html">Generic</a>
-								{% load static %}
-								<a href="elements.html">Elements</a>
+								<a href="{% url "index.html" %}">Home</a>
+								<a href="{% url "generic.html" %}">Generic</a>
+								<a href="{% url "elements.html" %}">Elements</a>
 							</nav>
 							<div class="menu-bar"><span class="lnr lnr-menu"></span></div>
 						</div>
@@ -76,9 +73,9 @@
 					<div class="col-lg-6">
 						<div class="story-content">
 							<h6 class="text-uppercase">REVIEWS WORTH READING</h6>
-							<h1>Behind Every <span id="wodry" class="sp-1">Product|Show|Service|Movie|Song|Business</span><br>
+							<h1>Behind Every <span id="wodry" class="sp-1">Product|Show|Movie|Song|Business|Play|Eatery|Concert|Service</span><br>
 							There is a <span class="sp-2">Review</span></h1>
-							<a href="#" class="genric-btn primary circle arrow">Get Started<span class="lnr lnr-arrow-right"></span></a>
+							<a href="#video-section" class="genric-btn primary circle arrow">Get Started<span class="lnr lnr-arrow-right"></span></a>
 						</div>
 					</div>
 				</div>
@@ -86,7 +83,7 @@
 		</section>
 		<!-- End Banner Area -->
 		<!-- Start Video Area -->
-		<section class="video-area pt-40 pb-40">
+		<section id="video-section" class="video-area pt-40 pb-40">
 			<div class="overlay overlay-bg"></div>
 			<div class="container">
 				<div class="video-content">
@@ -277,13 +274,13 @@
 				<form id="myForm" action="mail.php" method="post" class="contact-form">
 					<div class="row justify-content-center">
 						<div class="col-lg-5">
-							<input name="fname" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mt-20" required="" type="text">
+							<input name="fname" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mt-20" required type="text">
 						</div>
 						<div class="col-lg-5">
 							<input name="email" placeholder="Enter your email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your email address'" class="common-input mt-20" required type="email">
 						</div>
 						<div class="col-lg-10">
-							<textarea class="common-textarea mt-20" name="message" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'" required=""></textarea>
+							<textarea class="common-textarea mt-20" name="message" placeholder="Type your message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Type your message'" required></textarea>
 					</div>
 					<div class="col-lg-10 d-flex justify-content-end">
 						<button class="primary-btn white-bg d-inline-flex align-items-center mt-20"><span class="mr-10">Send Message</span><span class="lnr lnr-arrow-right"></span></button> <br>
