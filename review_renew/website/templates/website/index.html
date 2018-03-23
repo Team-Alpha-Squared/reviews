@@ -35,6 +35,8 @@
 		<link rel="stylesheet" href="{% static "website/css/bootstrap.css" %}">
 		{% load static %}
 		<link rel="stylesheet" href="{% static "website/css/main.css" %}">
+    {% load static %}
+    <link rel="stylesheet" href="{% static "website/css/wodry.css" %}">
 	</head>
 	<body>
 	<div class="oz-body-wrap">
@@ -74,7 +76,7 @@
 					<div class="col-lg-6">
 						<div class="story-content">
 							<h6 class="text-uppercase">REVIEWS WORTH READING</h6>
-							<h1>Behind Every <span class="sp-1">Success</span><br>
+							<h1>Behind Every <span id="wodry" class="sp-1">Product|Show|Service|Movie|Song|Business</span><br>
 							There is a <span class="sp-2">Review</span></h1>
 							<a href="#" class="genric-btn primary circle arrow">Get Started<span class="lnr lnr-arrow-right"></span></a>
 						</div>
@@ -266,9 +268,9 @@
 			<div class="container">
 				<div class="row justify-content-center text-center">
 					<div class="single-contact col-lg-6 col-md-8">
-						<h2 class="text-white">Send Us <span>Message</span></h2>
+						<h2 class="text-white">Send Us a <span>Message</span></h2>
 						<p class="text-white">
-							Most people who work in an office environment, buy computer products.
+							Let us know how Review Renew can help.
 						</p>
 					</div>
 				</div>
@@ -278,7 +280,7 @@
 							<input name="fname" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mt-20" required="" type="text">
 						</div>
 						<div class="col-lg-5">
-							<input name="email" placeholder="Enter email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" class="common-input mt-20" required="" type="email">
+							<input name="email" placeholder="Enter your email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your email address'" class="common-input mt-20" required type="email">
 						</div>
 						<div class="col-lg-10">
 							<textarea class="common-textarea mt-20" name="message" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'" required=""></textarea>
@@ -374,6 +376,8 @@
 		<script src="{% static "website/js/jquery.counterup.min.js" %}"></script>
 		{% load static %}
 		<script src="{% static "website/js/waypoints.min.js" %}"></script>
+    {% load static %}
+    <script src="{% static "website/js/wodry.js" %}"></script>
 		{% load static %}
 		<script src="{% static "website/js/main.js" %}"></script>
 	</body>
