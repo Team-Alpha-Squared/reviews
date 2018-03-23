@@ -10,4 +10,4 @@ def home_view(request):
 def about_view(request):
     """Function that renders About Page of Review Renew Website."""
 
-    return render(request, 'website/generic.html')
+    return render(request, 'website/about.html')

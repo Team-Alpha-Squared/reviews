@@ -34,6 +34,8 @@
 		<link rel="stylesheet" href="{% static "website/css/bootstrap.css" %}">
 		{% load static %}
 		<link rel="stylesheet" href="{% static "website/css/main.css" %}">
+		{% load static %}
+    <link rel="stylesheet" href="{% static "website/css/wodry.css" %}">
 	</head>
 	<body>
 		<div class="oz-body-wrap">
@@ -48,9 +50,8 @@
 							</div>
 							<div class="main-menubar d-flex align-items-center">
 								<nav class="hide">
-									<a href="index.html">Home</a>
-									<a href="generic.html">Generic</a>
-									<a href="elements.html">Elements</a>
+									<a href="{% url "home" %}">Home</a>
+									<a href="{% url "about" %}">About</a>
 								</nav>
 								<div class="menu-bar"><span class="lnr lnr-menu"></span></div>
 							</div>
@@ -223,11 +224,15 @@
 		{% load static %}
 		<script src="{% static "website/js/jquery.ajaxchimp.min.js" %}"></script>
 		{% load static %}
+		<script src="{% static "website/js/jquery.counterup.min.js" %}"></script>
+		{% load static %}
 		<script src="{% static "website/js/owl.carousel.min.js" %}"></script>
 		{% load static %}
 		<script src="{% static "website/js/jquery.nice-select.min.js" %}"></script>
 		{% load static %}
 		<script src="{% static "website/js/jquery.magnific-popup.min.js" %}"></script>
+		{% load static %}
+    <script src="{% static "website/js/wodry.js" %}"></script>
 		{% load static %}
 		<script src="{% static "website/js/main.js" %}"></script>
 	</body>
