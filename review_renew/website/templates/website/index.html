@@ -35,6 +35,8 @@
 		<link rel="stylesheet" href="{% static "website/css/bootstrap.css" %}">
 		{% load static %}
 		<link rel="stylesheet" href="{% static "website/css/main.css" %}">
+		{% load static %}
+		<link rel="stylesheet" href="{% static "website/css/custom.css" %}">
     {% load static %}
     <link rel="stylesheet" href="{% static "website/css/wodry.css" %}">
 	</head>
@@ -127,11 +129,10 @@
 			<div class="overlay overlay-bg"></div>
 			<div class="container">
 				<div class="video-content">
-					{% load static %}
-					<a href="http://www.youtube.com/watch?v=0O2aH4XLbto" class="play-btn"><img src="{% static "website/img/play-btn.png" %}" alt=""></a>
+          <a href="http://www.youtube.com/watch?v=0O2aH4XLbto"><span id="play-button" class="lnr lnr-film-play"></span></a>
 					<div class="video-desc">
-						<h3 class="h2 text-white text-uppercase">Review renew - how it works</h3>
-						<h4 class="text-white">A short introduction</h4>
+						<h3 class="h2 text-uppercase text-red">Review renew - how it works</h3>
+						<h4 class="text-red">A short introduction</h4>
 					</div>
 				</div>
 			</div>
