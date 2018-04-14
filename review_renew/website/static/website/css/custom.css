@@ -5,3 +5,11 @@
 #play-button {
   font-size: 600%;
 }
+
+#faq-container {
+  background-color: white;
+}
+
+.overlay-custom {
+  background-color: rgba(236,69,37,0.85);
+}
