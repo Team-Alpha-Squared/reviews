@@ -3,16 +3,21 @@ import scrapy
 
 class ReviewSpider(scrapy.Spider):
     """Class for instance of Scrapy Web-Crawler."""
-
-    name = "reviews"
+    name = "tlj_reviews"
 
     def start_requests(self):
         """Generate scraped webpage content."""
+
+        # Iterate over proper amount of pages and use the numbered index to
+        # build a list of all urls you want the scraper to target.
 
         urls = []
         for i in range(1, 52):
             url = 'https://www.rottentomatoes.com/m/star_wars_the_last_jedi/reviews/?page=' + str(i) + '&type=user&sort='
             urls.append(url)
+
+        # After the list is built, the parse() method is then called on each
+        # url (which writes the CSV file).
 
         for url in urls:
             yield scrapy.Request(url=url, callback=self.parse)
@@ -20,14 +25,26 @@ class ReviewSpider(scrapy.Spider):
     def parse(self, response):
         """Write generated scraped content to CSV file."""
 
-        f = open('newest_reviews.csv', 'a+')
+        # Create new CSV file if it does not exist, if it does open it and
+        # append new information.
+
+        f = open('newest_tlj_reviews.csv', 'a+')
         for review in response.css('div.review_table_row'):
+
+            # The above line is iterating over every review on the individual
+            # page of HTML in the response (using the urls variable we defined)
+            # Now, using the reviews on a given page, we must create variables
+            # that represent different aspects of the review. We do this below.
+
             user_review = review.css('div.user_review')
             star_rating = review.css('div.scoreWrapper').css('span')
             username = review.css('span')
             user_link = review.css('a').xpath('@href').extract()[0]
             date_review = review.css('span.fr').extract()[0]
             superreviewer_status = review.css('div.superreviewer').extract()[0]
+
+            # Using the variables defined above, write in proper format to a
+            # CSV file.
 
             f.write(user_review.extract()[0].split('</div>')[1].replace(',', '').replace(';', '') + ', ')
             try:

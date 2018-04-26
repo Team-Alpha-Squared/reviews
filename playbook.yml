@@ -33,7 +33,7 @@
         clone=yes
         repo=https://github.com/Team-Alpha-Squared/reviews.git
         dest=/home/ubuntu/review_renew/
-        version=features-website-deployment
+        version=features-bootstrap-implementation
     - name: Create venv
       command: python3 -m venv /home/ubuntu/review_renew/ENV
     - name: Install gunicorn to VENV
