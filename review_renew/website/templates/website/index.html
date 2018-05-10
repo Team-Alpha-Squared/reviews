@@ -1,26 +1,17 @@
 <!DOCTYPE html>
 <html lang="zxx" class="no-js">
-<head>
-	<!-- Mobile Specific Meta -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<!-- Favicon-->
-	{% load static %}
-	<link rel="shortcut icon" href="{% static "website/img/favicon.png" %}">
-	<!-- Author Meta -->
-	<meta name="author" content="Colorlib">
-	<!-- Meta Description -->
-	<meta name="description" content="">
-	<!-- Meta Keyword -->
-	<meta name="keywords" content="">
-	<!-- meta character set -->
-	<meta charset="UTF-8">
-	<!-- Site Title -->
-	<title>Review Renew</title>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		{% load static %}
+		<link rel="shortcut icon" href="{% static "website/img/favicon.png" %}">
+		<meta name="author" content="Colorlib">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta charset="UTF-8">
+		<title>Review Renew</title>
 
-	<link href="https://fonts.googleapis.com/css?family=Poppins:100,300,500" rel="stylesheet">
-		<!--
-		CSS
-		============================================= -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,300,500" rel="stylesheet">
+
 		{% load static %}
 		<link rel="stylesheet" href="{% static "website/css/linearicons.css" %}">
 		{% load static %}
@@ -42,7 +33,6 @@
 	</head>
 	<body>
 	<div class="oz-body-wrap">
-		<!-- Start Header Area -->
 		<header class="default-header">
 			<div class="container-fluid">
 				<div class="header-wrap">
@@ -60,8 +50,6 @@
 				</div>
 			</div>
 		</header>
-		<!-- End Header Area -->
-		<!-- Start Banner Area -->
 		<section class="banner-area relative">
 			<div class="container">
 				<div class="row fullscreen align-items-center justify-content-center">
@@ -80,8 +68,6 @@
 				</div>
 			</div>
 		</section>
-		<!-- End Banner Area -->
-		<!-- Start Feature Area -->
 		<section class="feature-area pt-100 pb-100  relative">
 			<div class="overlay overlay-bg"></div>
 			<div class="container">
@@ -123,8 +109,6 @@
 				</div>
 			</div>
 		</section>
-		<!-- Start Feature Area -->
-		<!-- Start Video Area -->
 		<section id="video-section" class="video-area pt-40 pb-40">
 			<div class="overlay overlay-bg"></div>
 			<div class="container">
@@ -137,8 +121,6 @@
 				</div>
 			</div>
 		</section>
-		<!-- End Video Area -->
-		<!-- Start faq Area -->
 		<div class="overlay-custom">
 		<section class="faq-area pt-100 pb-100">
 				<div id="faq-container" class="container">
@@ -189,55 +171,58 @@
 			<div class="overlay overlay-bg"></div>
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-4 col-sm-6 d-flex align-items-stretch">
-						<div class="single-feature">
-							<div class="icon">
-								<span class="lnr lnr-user"></span>
+					<div class="col-sm-6">
+						<div class="card">
+							{% load static %}
+							<div class="row m-0">
+								<div class="col p-0">
+									<div class="about-overlay h-100 w-100 rounded-top">
+										<div class="row h-100 align-items-center m-0">
+											<div class="col text-center p-0">
+												<a class="card-link d-inline-block font-weight-bold" href="https://www.github.com/Tsarcastic"><h2 class="hover-visible">GitHub</h2></a>
+												<a class="card-link d-inline-block font-weight-bold" href="https://www.linkedin.com/in/carson-newton"><h2 class="hover-visible">LinkedIn</h2></a>
+											</div>
+										</div>
+									</div>
+									<img class="card-img-top" src="{% static "website/img/carson_newton.JPG" %}" alt="Carson Newton">
+								</div>
 							</div>
-							<div class="desc">
-								<h2 class="text-uppercase">powered by users <br>for users</h2>
-								<p>Review Renew can spot fake or bot-generated text so that you only read genuine reviews from real users.</p>
+							<div class="card-body">
+								<h4 class="card-title text-uppercase text-center">Brendan Davis - Software Engineer</h4>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-4 col-sm-6 d-flex align-items-stretch">
-						<div class="single-feature">
-							<div class="icon">
-								<span class="lnr lnr-rocket"></span>
+					<div class="col-sm-6">
+						<div class="card">
+							{% load static %}
+							<div class="row m-0">
+								<div class="col p-0">
+									<div class="about-overlay h-100 w-100 rounded-top">
+										<div class="row h-100 align-items-center m-0">
+											<div class="col text-center p-0">
+												<a class="card-link d-inline-block font-weight-bold" href="https://www.github.com/nosrac77"><h2 class="hover-visible">GitHub</h2></a>
+												<a class="card-link d-inline-block font-weight-bold" href="https://www.linkedin.com/in/carson-newton"><h2 class="hover-visible">LinkedIn</h2></a>
+											</div>
+										</div>
+									</div>
+									<img class="card-img-top" src="{% static "website/img/carson_newton.JPG" %}" alt="Carson Newton">
+								</div>
 							</div>
-							<div class="desc">
-								<h2 class="text-uppercase">Increased Efficiency <br>adds up</h2>
-								<p>Sifting through reviews can be a slow process. Using Review Renew makes finding good reviews easy, giving you more time throughout your week.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-sm-6 d-flex align-items-stretch">
-						<div class="single-feature">
-							<div class="icon">
-								<span class="lnr lnr-license"></span>
-							</div>
-							<div class="desc">
-								<h2 class="text-uppercase">State of the
-								<br>art algorithm</h2>
-								<p>Our Certified Software Engineers utilize advanced machine-learning technology, making Review Renew fast, secure, and accurate.</p>
+							<div class="card-body">
+								<h4 class="card-title text-uppercase text-center">Carson Newton - Full Stack Developer</h4>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<!-- Start faq Area -->
-		<!-- Strat Footer Area -->
 		<footer class="section-gap">
 			<div class="container">
 				<div class="footer-bottom d-flex justify-content-between align-items-center flex-wrap">
-					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 					<p class="footer-text m-0">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
-					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 				</div>
 			</div>
 		</footer>
-		<!-- End Footer Area -->
 	  </div>
 
     {% load static %}
