@@ -16,8 +16,6 @@
 
 .about-overlay {
   position: absolute;
-  height: 78%;
-  width: 100%;
   z-index: 10;
   background-color: rgb(0, 0, 0, 0.4);
   opacity: 0;
