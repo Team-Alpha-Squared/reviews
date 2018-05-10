@@ -171,15 +171,24 @@
 			<div class="overlay overlay-bg"></div>
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-6 col-sm-6">
-						<div class="single-feature">
-							<img class="img-fluid" src="" alt="Brendan Davis">
-							<div class="position-relative">
-								<p>Link1</p>
-								<p>Link2</p>
+					<div class="col-sm-6">
+						<div class="card">
+							{% load static %}
+							<div class="row m-0">
+								<div class="col p-0">
+									<div class="about-overlay h-100 w-100 rounded-top">
+										<div class="row h-100 align-items-center m-0">
+											<div class="col text-center p-0">
+												<a class="card-link d-inline-block font-weight-bold" href="https://www.github.com/Tsarcastic"><h2 class="hover-visible">GitHub</h2></a>
+												<a class="card-link d-inline-block font-weight-bold" href="https://www.linkedin.com/in/carson-newton"><h2 class="hover-visible">LinkedIn</h2></a>
+											</div>
+										</div>
+									</div>
+									<img class="card-img-top" src="{% static "website/img/carson_newton.JPG" %}" alt="Carson Newton">
+								</div>
 							</div>
-							<div class="desc">
-								<h2 class="text-uppercase">Brendan Davis - Software Engineer</h2>
+							<div class="card-body">
+								<h4 class="card-title text-uppercase text-center">Brendan Davis - Software Engineer</h4>
 							</div>
 						</div>
 					</div>
@@ -189,8 +198,8 @@
 							<div class="row m-0">
 								<div class="col p-0">
 									<div class="about-overlay h-100 w-100 rounded-top">
-										<div class="row h-100 align-items-center">
-											<div class="col text-center">
+										<div class="row h-100 align-items-center m-0">
+											<div class="col text-center p-0">
 												<a class="card-link d-inline-block font-weight-bold" href="https://www.github.com/nosrac77"><h2 class="hover-visible">GitHub</h2></a>
 												<a class="card-link d-inline-block font-weight-bold" href="https://www.linkedin.com/in/carson-newton"><h2 class="hover-visible">LinkedIn</h2></a>
 											</div>
