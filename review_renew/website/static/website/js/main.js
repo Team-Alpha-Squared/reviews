@@ -2,6 +2,11 @@
 $(document).ready(function(){
 	"use strict";
 
+	$('.about-overlay').hover(
+		function() {$('.hover-visible').animate({opacity: '1'}, 400);},
+		function() {$('.hover-visible').animate({opacity: '0'}, 400);}
+		);
+
 	$('#wodry').wodry({
     animation: 'rotateX',
     delay: 1500,
