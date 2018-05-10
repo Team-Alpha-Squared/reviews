@@ -1,0 +1,32 @@
+.text-red {
+  color: #ea3725;
+}
+
+#play-button {
+  font-size: 600%;
+}
+
+#faq-container {
+  background-color: white;
+}
+
+.overlay-custom {
+  background-color: rgba(236,69,37,0.85);
+}
+
+.about-overlay {
+  position: absolute;
+  z-index: 10;
+  background-color: rgb(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 200ms;
+}
+
+.about-overlay:hover {
+  opacity: 1;
+}
+
+.hover-visible {
+  color: white;
+  opacity: 1;
+}
