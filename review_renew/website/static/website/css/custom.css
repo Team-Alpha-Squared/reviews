@@ -19,7 +19,7 @@
   z-index: 10;
   background-color: rgb(0, 0, 0, 0.4);
   opacity: 0;
-  transition: opacity 1s;
+  transition: opacity 200ms;
 }
 
 .about-overlay:hover {

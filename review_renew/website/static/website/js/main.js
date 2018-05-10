@@ -3,9 +3,9 @@ $(document).ready(function(){
 	"use strict";
 
 	$('.about-overlay').hover(
-		function() {$('.hover-visible').animate({opacity: '1'}, 400);},
-		function() {$('.hover-visible').animate({opacity: '0'}, 400);}
-		);
+		function() {$('.hover-visible').animate({opacity: '1'}, 50);},
+		function() {$('.hover-visible').animate({opacity: '0'}, 50);}
+	);
 
 	$('#wodry').wodry({
     animation: 'rotateX',
